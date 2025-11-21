@@ -1,0 +1,132 @@
+/* ========== GLOBAL STYLES ========== */
+
+body{
+    background-color: #0D0D0D;
+    color: #f9f6f6 !important;
+    overflow: visible;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+#loading-screen{
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    width: 100vw;
+    bottom: 0;
+}
+
+/* ========== REUSABLE STYLES ======== */
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* ============= SIDE NAV ============ */
+
+.side-nav-container{
+    position: fixed;
+    height: 100vh;
+    width: 345px;
+    transition: left .6s ease;
+    z-index: 1045; 
+    bottom: 0;
+}
+.side-nav-container.open {
+  left: 0 !important;
+}
+.side-nav{
+    z-index: 1046;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    position: absolute;
+    right: 0;
+    z-index: 1046;
+    height: 100vh;
+}
+.side-nav .logo{
+    width: 50px;
+}
+.side-nav .logo img{
+    width: 100%;
+}
+.side-nav .side-nav-trigger{
+    border: none;
+    background: none;
+}
+.side-nav .side-nav-trigger i{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.side-nav .icons-container i{
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.extended-nav{
+    width: 277px;
+    transition: transform 1s ease;
+    will-change: transform, opacity;
+    background-color: #161616;
+    z-index: 1047;
+}
+.extended-nav .nav-link{
+    color: white;
+    font-size: 1rem;
+    padding: .4rem 0;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .4s ease, transform .5s ease;
+    cursor: pointer;
+}
+.extended-nav .nav-link.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.extended-nav .nav-footer i{
+    cursor: pointer;
+    font-size: 1rem;
+}
+.extended-nav .footer p{
+    font-size: .95rem;
+}
+
+/* ============= MAIN CONTENT ============ */
+
+main{
+    position: absolute; 
+    top: 0;
+    margin-left: 80px; 
+    min-height: 100vh;
+    width: calc(100% - 80px); 
+    z-index: 1; 
+}
+#data{
+    margin-top: 10px;
+}
+.meal{
+    cursor: pointer;
+}
+.meal .meal-img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.meal:hover .meal-layer {
+    top: 0;
+}
+.meal-layer {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
+}
+
+/* ================ SEARCH =============== */
+
+.inputs-container input::placeholder {
+    color: #8b8989 !important;
+}
